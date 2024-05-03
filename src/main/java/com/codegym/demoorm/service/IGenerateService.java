@@ -1,2 +1,10 @@
-package com.codegym.demoorm.service;public class IGenerateService {
+package com.codegym.demoorm.service;
+
+import java.util.List;
+
+public interface IGenerateService<T> {
+    List<T> findAll();
+    T findById(Long id);
+    void save(T t);
+    void remove(Long id);
 }
